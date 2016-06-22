@@ -1,0 +1,10 @@
+#!/bin/bash
+
+indent() {
+  sed -u 's/^/       /'
+}
+
+cd $1
+
+curl https://github.com/imageio/imageio-binaries/raw/master/freeimage/libfreeimage-3.16.0-linux64.so --create-dirs -o .imageio/freeimage/libfreeimage-3.16.0-linux64.s
+curl https://github.com/imageio/imageio-binaries/raw/master/ffmpeg/ffmpeg.linux64  --create-dirs -o .imageio/ffmpeg/ffmpeg.linux64
